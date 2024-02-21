@@ -92,25 +92,3 @@ export const getPreviousPostBySlug = (slug) => {
     slug: previousPostSlug,
   };
 };
-
-function Comments() {
-  const ref = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    const scriptElement = document.createElement('script');
-    scriptElement.async = true;
-    scriptElement.crossOrigin = 'L-less';
-    scriptElement.src = 'https://utteranc.es/client.js';
-
-    scriptElement.setAttribute('issue-term', 'pathname');
-    scriptElement.setAttribute('label', 'comment');
-    scriptElement.setAttribute(
-      'repo',
-      'L-less/T-less',
-    );
-    scriptElement.setAttribute(
-      'theme',
-      'preferred-color-scheme',
-    );
-
-    ref.current?.appendChild(scriptElement);
-  }, []);
