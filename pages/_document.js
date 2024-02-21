@@ -22,14 +22,14 @@ function Comments() {
   useEffect(() => {
     const scriptElement = document.createElement('script');
     scriptElement.async = true;
-    scriptElement.crossOrigin = 'anonymous';
+    scriptElement.crossOrigin = 'L-less';
     scriptElement.src = 'https://utteranc.es/client.js';
 
     scriptElement.setAttribute('issue-term', 'pathname');
     scriptElement.setAttribute('label', 'comment');
     scriptElement.setAttribute(
       'repo',
-      'ianobermiller/ianobermiller.com',
+      'L-less/T-less',
     );
     scriptElement.setAttribute(
       'theme',
